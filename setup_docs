@@ -1,0 +1,91 @@
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+
+
+Step 1: Install Prerequisites
+  1. Install Node.js: Download and install Node.js from nodejs.org. This will also install npm (Node Package Manager).
+  2. Install Expo CLI:
+      Open a terminal and run:
+      npm install -g expo-cli
+
+Step 2: Create a New Expo App
+  Open a terminal and run the following command to create a new Expo project:
+    expo init MyNewProject
+  Choose a template:
+    Blank: Starts with a minimal setup.
+    Blank (TypeScript): Starts with TypeScript enabled.
+    Managed workflow: Pre-configured environment for development.
+  Navigate to the project directory:
+    cd MyNewProject
+
+
+Step 3: Open the Project in Visual Studio Code
+    Open Visual Studio Code.
+    From the menu, click on File > Open Folder.
+    Select the MyNewProject folder and click Open.
+
+Step 4: Install Dependencies
+  In the terminal within VS Code, run:
+  npm install
+  Please type it in the VSC! 
+  This ensures all dependencies are installed.
+
+Step 5: Run the Expo App
+  1. Start the Expo development server:
+      expo start
+  2. A browser window will open with the Expo developer tools. You can also scan the QR code with your Expo Go app (available on iOS and Android).
+
+
+OPTIONAL: 
+  **: Debugging with VS Code
+  Install the React Native Tools extension from the VS Code Extensions Marketplace.
+  Configure debugging by creating a launch.json file in the .vscode folder.
+
+  **: Build and Deploy (Optional)
+  To build the app for production, use Expo's build services:
+  expo build:android
+  expo build:ios
+
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+
+
+COMMON TROUBLE SHOOTING : CLI - DEPRECATED-ERROR
+  Step 1: Uninstall the Deprecated Global Expo CL
+        npm uninstall -g expo-cli
+  Step 2: Use the New Expo CLI
+        The new Expo CLI is included in your project as part of the expo package. 
+        Use npx expo instead of the global expo-cli.
+        COMMAND : npx expo start
+
+  
+  Step 3: Ensure the Correct Node.js Version
+      Check your Node.js version:
+          node -v
+      If needed, use nvm to switch to an LTS version:
+          nvm install 18
+          nvm use 18
+
+  Step 4: Update Expo and Dependencies
+      Ensure the expo package in your project is up-to-date:
+          npm install expo@latest
+      Update other dependencies:
+          expo install
+
+  
+
+  Step 5: Start Your Project
+      Now, try starting your project again:
+      npx expo start
+
+  Optional: Clear the Cache
+      npx expo start --clear
+
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
+#######################################################################################################################################################################
