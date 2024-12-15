@@ -43,6 +43,13 @@ const HomePage = ( {navigation }) => {
                 <Text style={styles.buttonText}>Settings</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+                style={styles.button}
+                onPress={()=> navigation.navigate('DocumentationPage')}>
+                    <Text style={styles.buttonText}>Documentation</Text>
+            
+            </TouchableOpacity>
+
           </View>
            
          </View>

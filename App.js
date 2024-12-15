@@ -3,6 +3,7 @@ import React from "react";
 import ChatPage from './components/ChatPage'; 
 import HomePage from './components/HomePage'; 
 import SettingPage from './components/SeetingPage'; 
+import DocumentationPage from "./components/DocumentationPage";
 
 
 import { NavigationContainer } from '@react-navigation/native';  
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="ChatPage" component={ChatPage} />
         <Stack.Screen name="SettingPage" component={SettingPage} />
+        <Stack.Screen name="DocumentationPage" component={DocumentationPage} />
         {/** add more pages here as Stack.  */}
 
       </Stack.Navigator>
