@@ -93,3 +93,17 @@ COMMON TROUBLE SHOOTING : CLI - DEPRECATED-ERROR
 Use of Navigation stack. 
 expo install @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-gesture-handler react-native-reanimated react-native-svg
 
+
+
+Use of SQLite storage : use a SQLite wrapper like expo-sqlite
+npm install react-native-sqlite-storage
+(npx) expo install expo-sqlites
+
+The Expo SDK provides access to device and system functionality such as contacts, camera, gyroscope, GPS location, and so on, in the form of packages. You can install any Expo SDK package using the npx expo install command. For example, three different packages are installed using the following command:
+npx expo install expo-camera expo-contacts expo-sensors
+
+HOW TO USE : 
+import { CameraView } from 'expo-camera';
+import * as Contacts from 'expo-contacts';
+import { Gyroscope } from 'expo-sensors';
+

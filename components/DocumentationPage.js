@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, FlatList, StyleSheet } from 'react-native';
 import { database, ref, set, push, onValue } from '../DataBase/firebaseConfig'; // Import firebase setup
-
+// firebaseConfig.js file is where you initialize Firebase with your credentials and set up the database.
 
 // DocumentationPage component
 const DocumentationPage = () => {
@@ -9,7 +9,8 @@ const DocumentationPage = () => {
       const [note, setNote] = useState('');
       const [notes, setNotes] = useState([]);
     
-      // Save note to Firebase
+// Save note when user press "Save Note" button. 
+// save data into firebase using set() method. 
   const saveNote = () => {
     if (note.trim() === '') return; // Prevent saving empty notes
     const notesRef = ref(database, 'notes/');
@@ -19,7 +20,8 @@ const DocumentationPage = () => {
       .catch((error) => console.error('Error saving note:', error));
   };
 
-  // Fetch notes from Firebase
+  // onValue() : fetch data from firebase in real time. : available to see any chagnes 
+  // without refreshing the app. 
   useEffect(() => {
     const notesRef = ref(database, 'notes/');
     const unsubscribe = onValue(notesRef, (snapshot) => {
